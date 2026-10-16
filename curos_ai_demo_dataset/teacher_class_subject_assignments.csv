@@ -1,0 +1,8 @@
+id,teacher_id,teacher_name,class_id,class_name,subject_name,academic_year
+tcsa-1,tch-amit,Mr. Amit Sharma,cls-10a,Class 10-A,Mathematics,2026-2027
+tcsa-2,tch-amit,Mr. Amit Sharma,cls-9a,Class 9-A,Mathematics,2026-2027
+tcsa-3,tch-03,Prof. Alok Mukherjee,cls-10a,Class 10-A,Physics,2026-2027
+tcsa-4,tch-02,Dr. Neha Sharma,cls-10a,Class 10-A,Chemistry & Biology,2026-2027
+tcsa-5,tch-04,Ms. Sunita Roy,cls-10a,Class 10-A,English Literature,2026-2027
+tcsa-6,tch-01,Mr. Rajesh Verma,cls-10a,Class 10-A,Social Science,2026-2027
+tcsa-7,tch-05,Mr. David Fernandez,cls-10a,Class 10-A,Computer Science & AI,2026-2027

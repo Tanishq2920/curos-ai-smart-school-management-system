@@ -1,0 +1,8 @@
+id,invoice_id,student_id,student_name,amount_paid,payment_date,payment_method,transaction_ref,status
+pay-101,inv-101,std-101,Aarav Patel,22000,2026-08-10,UPI / Net Banking,TXN-99881101,Success
+pay-102,inv-102,std-102,Ananya Sharma,22000,2026-08-12,Credit Card,TXN-99881102,Success
+pay-103,inv-103,std-103,Rohan Mehra,11000,2026-08-14,Cheque,CHQ-445501,Success
+pay-104,inv-104,std-104,Diya Sengupta,22000,2026-08-11,Net Banking,TXN-99881104,Success
+pay-106,inv-106,std-106,Sneha Kulkarni,6600,2026-08-15,UPI,TXN-99881106,Success
+pay-107,inv-107,std-107,Aditya Chopra,22000,2026-08-08,Net Banking,TXN-99881107,Success
+pay-108,inv-108,std-108,Ishita Roy,22000,2026-08-09,UPI,TXN-99881108,Success

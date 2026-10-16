@@ -1,0 +1,285 @@
+# ============================================================
+# CUROS AI — SMART SCHOOL MANAGEMENT SYSTEM
+# PRESENTATION & TROUBLESHOOTING COMMAND CHEAT SHEET
+# Project: C:\Users\Tanishq\Downloads\priyu
+# ============================================================
+
+
+# ------------------------------------------------------------
+# 1. PROJECT SETUP AND BASIC INFORMATION
+# ------------------------------------------------------------
+
+# Project folder mein jaana
+cd "C:\Users\Tanishq\Downloads\priyu"
+
+# Project ki files aur folders dekhna
+Get-ChildItem
+
+# Node.js version check karna
+node --version
+
+# npm version check karna
+npm --version
+
+# Python version check karna
+python --version
+
+# Current Python environment mein pip version check karna
+python -m pip --version
+
+# package.json mein available scripts dekhna
+npm run
+
+
+# ------------------------------------------------------------
+# 2. INSTALLING DEPENDENCIES
+# ------------------------------------------------------------
+
+# Project ki Node.js dependencies install karna
+# Initial setup ya dependencies change hone par use karein
+npm install
+
+# Python environment mein installed packages dekhna
+python -m pip list
+
+
+# ------------------------------------------------------------
+# 3. STARTING THE APPLICATION
+# ------------------------------------------------------------
+
+# Project root directory mein jaana
+cd "C:\Users\Tanishq\Downloads\priyu"
+
+# Configured development script run karna
+npm run dev
+
+# IMPORTANT:
+# Agar command ke baad PowerShell prompt wapas aa jaye,
+# toh check karein ki frontend aur backend actually running hain.
+# Terminal mein printed URL ko browser mein open karein.
+
+
+# ------------------------------------------------------------
+# 4. STARTING FRONTEND SEPARATELY
+# ------------------------------------------------------------
+
+# FRONTEND TERMINAL:
+# Project root se Vite frontend start karna
+npx vite --host 127.0.0.1 --port 3000
+
+# Agar port 3000 busy ho, toh ye alternative try karein
+npx vite --host 127.0.0.1 --port 3001
+
+# IMPORTANT:
+# Browser mein wahi URL open karein jo Vite terminal print kare.
+# Example: http://127.0.0.1:3001/
+
+
+# ------------------------------------------------------------
+# 5. STARTING BACKEND SEPARATELY
+# ------------------------------------------------------------
+
+# BACKEND TERMINAL:
+# Project root directory mein jaana
+cd "C:\Users\Tanishq\Downloads\priyu"
+
+# Flask backend start karne ki koshish karna
+python backend/app.py
+
+# IMPORTANT:
+# Agar backend already running hai, toh duplicate process start
+# karne se port conflict ho sakta hai.
+# Agar module missing ya port error aaye, toh error check karein.
+
+
+# ------------------------------------------------------------
+# 6. CHECKING FRONTEND AND BACKEND CONNECTIVITY
+# ------------------------------------------------------------
+
+# Port 3000 par frontend connectivity check karna
+Test-NetConnection localhost -Port 3000
+
+# Port 3001 par frontend connectivity check karna
+Test-NetConnection localhost -Port 3001
+
+# Port 5001 par backend connectivity check karna
+Test-NetConnection localhost -Port 5001
+
+# TcpTestSucceeded : True ka matlab TCP connection successful hai.
+# Isse application ke saare features working hone ki guarantee nahi milti.
+
+
+# ------------------------------------------------------------
+# 7. CHECKING WHICH PROCESS USES A PORT
+# ------------------------------------------------------------
+
+# Port 3000 par listening process ka PID check karna
+Get-NetTCPConnection -LocalPort 3000 -State Listen -ErrorAction SilentlyContinue |
+    Select-Object LocalAddress, LocalPort, OwningProcess
+
+# Port 3001 par listening process ka PID check karna
+Get-NetTCPConnection -LocalPort 3001 -State Listen -ErrorAction SilentlyContinue |
+    Select-Object LocalAddress, LocalPort, OwningProcess
+
+# Port 5001 par listening process ka PID check karna
+Get-NetTCPConnection -LocalPort 5001 -State Listen -ErrorAction SilentlyContinue |
+    Select-Object LocalAddress, LocalPort, OwningProcess
+
+# Kisi PID ka process name check karna
+# <PID> ko actual numeric process ID se replace karein
+# Example: Get-Process -Id 1234
+Get-Process -Id <PID>
+
+
+# ------------------------------------------------------------
+# 8. VERIFYING THE SQLITE DATABASE
+# ------------------------------------------------------------
+
+# Check karna ki database file exist karti hai ya nahi
+Test-Path "backend\school.db"
+
+# Database ka full path, size aur last modified time dekhna
+Get-Item "backend\school.db" |
+    Select-Object FullName, Length, LastWriteTime
+
+# Database mein saari tables ke naam dekhna
+python -c "import sqlite3; c=sqlite3.connect('backend/school.db'); print([x[0] for x in c.execute('SELECT name FROM sqlite_master WHERE type=? ORDER BY name', ('table',)).fetchall()]); c.close()"
+
+# Database tables mein total records count karna
+@'
+import sqlite3
+
+conn = sqlite3.connect("backend/school.db")
+cursor = conn.cursor()
+
+tables = cursor.execute(
+    "SELECT name FROM sqlite_master WHERE type=? ORDER BY name",
+    ("table",)
+).fetchall()
+
+for (table,) in tables:
+    count = cursor.execute(
+        f'SELECT COUNT(*) FROM "{table}"'
+    ).fetchone()[0]
+    print(f"{table}: {count} records")
+
+conn.close()
+'@ | python -
+
+
+# ------------------------------------------------------------
+# 9. VIEWING STUDENT RECORDS
+# ------------------------------------------------------------
+
+# Students table ke columns aur first 5 records dekhna
+python -c "import sqlite3; c=sqlite3.connect('backend/school.db'); print('Columns:', [x[1] for x in c.execute('PRAGMA table_info(students)')]); print('Sample records:', c.execute('SELECT * FROM students LIMIT 5').fetchall()); c.close()"
+
+
+# ------------------------------------------------------------
+# 10. VIEWING TEACHER RECORDS
+# ------------------------------------------------------------
+
+# Teachers table ke columns aur first 5 records dekhna
+python -c "import sqlite3; c=sqlite3.connect('backend/school.db'); print('Columns:', [x[1] for x in c.execute('PRAGMA table_info(teachers)')]); print('Sample records:', c.execute('SELECT * FROM teachers LIMIT 5').fetchall()); c.close()"
+
+
+# ------------------------------------------------------------
+# 11. VIEWING ATTENDANCE RECORDS
+# ------------------------------------------------------------
+
+# Attendance table ke columns aur first 5 records dekhna
+python -c "import sqlite3; c=sqlite3.connect('backend/school.db'); print('Columns:', [x[1] for x in c.execute('PRAGMA table_info(attendance_records)')]); print('Sample records:', c.execute('SELECT * FROM attendance_records LIMIT 5').fetchall()); c.close()"
+
+
+# ------------------------------------------------------------
+# 12. VIEWING EXAM RESULTS
+# ------------------------------------------------------------
+
+# Exam results table ke columns aur first 5 records dekhna
+python -c "import sqlite3; c=sqlite3.connect('backend/school.db'); print('Columns:', [x[1] for x in c.execute('PRAGMA table_info(exams_results)')]); print('Sample records:', c.execute('SELECT * FROM exams_results LIMIT 5').fetchall()); c.close()"
+
+
+# ------------------------------------------------------------
+# 13. VIEWING FEE RECORDS
+# ------------------------------------------------------------
+
+# Fee invoices table ke columns aur first 5 records dekhna
+python -c "import sqlite3; c=sqlite3.connect('backend/school.db'); print('Columns:', [x[1] for x in c.execute('PRAGMA table_info(fee_invoices)')]); print('Sample records:', c.execute('SELECT * FROM fee_invoices LIMIT 5').fetchall()); c.close()"
+
+# Fee payments table ke columns aur first 5 records dekhna
+python -c "import sqlite3; c=sqlite3.connect('backend/school.db'); print('Columns:', [x[1] for x in c.execute('PRAGMA table_info(fee_payments)')]); print('Sample records:', c.execute('SELECT * FROM fee_payments LIMIT 5').fetchall()); c.close()"
+
+
+# ------------------------------------------------------------
+# 14. RUNNING API TESTS
+# ------------------------------------------------------------
+
+# Backend API test script execute karna
+python backend/test_api.py
+
+# package.json ka configured test script execute karna
+npm test
+
+# NOTE:
+# Agar npm test mein python3 command not found aaye,
+# toh Windows PowerShell mein python backend/test_api.py try karein.
+
+
+# ------------------------------------------------------------
+# 15. TYPESCRIPT CHECKS AND PRODUCTION BUILD
+# ------------------------------------------------------------
+
+# TypeScript type checking karna
+npm run lint
+
+# Frontend ka production build generate karna
+npm run build
+
+# Production build ko locally preview karna
+# Isse pehle npm run build successfully complete hona chahiye
+npm run preview
+
+
+# ------------------------------------------------------------
+# 16. TROUBLESHOOTING PYTHON PACKAGES
+# ------------------------------------------------------------
+
+# Python environment aur pip ka location check karna
+python -m pip --version
+
+# Installed Python packages ki list dekhna
+python -m pip list
+
+# Example: Flask-SQLAlchemy missing ho toh install karna
+# Sirf tab run karein jab error isi package ka ho
+python -m pip install Flask-SQLAlchemy
+
+
+# ------------------------------------------------------------
+# 17. PRESENTATION DAY CHECKLIST
+# ------------------------------------------------------------
+
+# Step 1: Project folder open karein
+cd "C:\Users\Tanishq\Downloads\priyu"
+
+# Step 2: Database file verify karein
+Test-Path "backend\school.db"
+
+# Step 3: Backend connectivity check karein
+Test-NetConnection localhost -Port 5001
+
+# Step 4: Frontend aur backend ko project ke configured
+# startup process se start karein
+npm run dev
+
+# Step 5: Terminal mein printed frontend URL browser mein open karein
+
+# Step 6: Login, role-specific dashboards, student management,
+# teacher management, attendance, fees aur chatbot test karein.
+
+# Step 7: Database records sirf zarurat padne par inspect karein.
+
+
+# ============================================================
+# END OF CUROS AI COMMAND CHEAT SHEET
+# ============================================================

@@ -1,0 +1,4 @@
+id,title,description,class,subject,teacher_id,teacher_name,due_date,max_marks,status,created_at
+asg-101,Mathematics Chapter 5: Quadratic Equations Problem Set,"Complete all exercises from Chapter 5, questions 1 through 25 with full step proofs.",Class 10-A,Mathematics,tch-amit,Mr. Amit Sharma,2026-10-20,100,Pending,2026-10-10
+asg-102,Physics Practical Lab: Optics & Focal Length Experiment,Submit lab observations for convex lens image distance verification.,Class 10-A,Physics,tch-03,Prof. Alok Mukherjee,2026-10-23,50,Pending,2026-10-12
+asg-103,English Literature: The Merchant of Venice Act III Analysis,Write a critical commentary on Portia's speech in Act III Scene 2.,Class 10-A,English Literature,tch-04,Ms. Sunita Roy,2026-10-26,50,Pending,2026-10-14

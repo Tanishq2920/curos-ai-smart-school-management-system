@@ -1,0 +1,11 @@
+id,exam_name,student_id,student_name,class,subject,marks_obtained,max_marks,grade,published,remarks
+res-101,Term 1 Assessment 2026,std-101,Aarav Patel,Class 10-A,Mathematics,95,100,A+,1,Outstanding analytical skills
+res-102,Term 1 Assessment 2026,std-101,Aarav Patel,Class 10-A,Physics,92,100,A+,1,Excellent conceptual clarity
+res-103,Term 1 Assessment 2026,std-101,Aarav Patel,Class 10-A,English Literature,88,100,A,1,Very good comprehension
+res-104,Term 1 Assessment 2026,std-102,Ananya Sharma,Class 10-A,Mathematics,98,100,A+,1,Top score in class
+res-105,Term 1 Assessment 2026,std-102,Ananya Sharma,Class 10-A,Physics,96,100,A+,1,Exemplary lab performance
+res-106,Term 1 Assessment 2026,std-103,Rohan Mehra,Class 10-A,Mathematics,78,100,B+,1,Consistent effort
+res-107,Term 1 Assessment 2026,std-103,Rohan Mehra,Class 10-A,Physics,82,100,A,1,Good improvement
+res-108,Term 1 Assessment 2026,std-104,Diya Sengupta,Class 10-A,Mathematics,91,100,A+,1,Strong problem solver
+res-109,Term 1 Assessment 2026,std-105,Kabir Khan,Class 10-A,Mathematics,68,100,B,1,Needs practice in algebra
+res-110,Term 1 Assessment 2026,std-106,Sneha Kulkarni,Class 10-A,Mathematics,94,100,A+,1,Very dedicated and thorough

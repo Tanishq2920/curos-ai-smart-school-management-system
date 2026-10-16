@@ -1,0 +1,6 @@
+id,name,grade,section,room,class_teacher,total_students,capacity
+cls-10a,Class 10-A,10th Grade,A,Room 101,Mr. Amit Sharma,30,35
+cls-9a,Class 9-A,9th Grade,A,Room 102,Ms. Sunita Roy,28,35
+cls-9b,Class 9-B,9th Grade,B,Room 103,Dr. Neha Sharma,30,35
+cls-11a,Class 11-A,11th Grade,A - Science,Room 201,Prof. Alok Mukherjee,26,30
+cls-12a,Class 12-A,12th Grade,A - Science,Room 204,Mr. David Fernandez,29,30

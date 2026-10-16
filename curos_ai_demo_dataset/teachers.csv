@@ -1,0 +1,7 @@
+id,name,employee_id,subject,department,email,phone,classes_assigned,status
+tch-amit,Mr. Amit Sharma,EMP-T100,Mathematics,Science & Mathematics,amit.sharma@smartschool.edu,+91 98234 11000,"[""Class 10-A"", ""Class 9-A""]",Active
+tch-01,Mr. Rajesh Verma,EMP-T101,Social Science,Humanities,rajesh.verma@smartschool.edu,+91 98234 11001,"[""Class 10-A"", ""Class 11-A""]",Active
+tch-02,Dr. Neha Sharma,EMP-T102,Biology & Chemistry,Science & Mathematics,neha.sharma@smartschool.edu,+91 98234 11002,"[""Class 9-B"", ""Class 10-B""]",Active
+tch-03,Prof. Alok Mukherjee,EMP-T103,Physics,Science & Mathematics,alok.m@smartschool.edu,+91 98234 11003,"[""Class 10-A"", ""Class 11-A""]",Active
+tch-04,Ms. Sunita Roy,EMP-T104,English Literature,Languages & Humanities,sunita.roy@smartschool.edu,+91 98234 11004,"[""Class 8-A"", ""Class 10-A""]",Active
+tch-05,Mr. David Fernandez,EMP-T105,Computer Science & AI,Technology,david.f@smartschool.edu,+91 98234 11005,"[""Class 10-A"", ""Class 12-A""]",Active

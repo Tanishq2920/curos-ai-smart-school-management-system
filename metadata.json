@@ -1,0 +1,6 @@
+{
+  "name": "Smart School Management System",
+  "description": "Comprehensive School ERP with role-based dashboards for Admins, Teachers, Students, and Parents.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

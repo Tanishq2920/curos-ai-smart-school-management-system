@@ -1,0 +1,6 @@
+id,exam_name,class_name,subject,exam_date,start_time,duration_minutes,room,max_marks,passing_marks
+ex-101,Mid-Term Examination 2026,Class 10-A,Mathematics,2026-10-25,09:00 AM,180,Room 101,100,40
+ex-102,Mid-Term Examination 2026,Class 10-A,Physics & Chemistry,2026-10-28,09:00 AM,180,Room 101,100,40
+ex-103,Mid-Term Examination 2026,Class 10-A,English Literature,2026-10-30,09:00 AM,180,Room 101,100,40
+ex-104,Mid-Term Examination 2026,Class 10-A,Social Science,2026-11-03,09:00 AM,180,Room 101,100,40
+ex-105,Mid-Term Examination 2026,Class 10-A,Computer Science & AI,2026-11-05,09:00 AM,180,Computer Lab 1,100,40

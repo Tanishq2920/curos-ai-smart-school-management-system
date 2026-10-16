@@ -1,0 +1,3 @@
+-- CUROS AI Demo Dataset Import Script
+-- Tables: teachers, classes, teacher_class_subject_assignments, students, parents,
+-- fee_invoices, fee_payments, attendance, parent_meetings, assignments, exams, published_results

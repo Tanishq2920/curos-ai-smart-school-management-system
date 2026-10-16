@@ -1,0 +1,9 @@
+id,invoice_number,student_id,student_name,class,term,total_amount,paid_amount,balance_amount,status,due_date,created_at
+inv-101,INV-2026-001,std-101,Aarav Patel,Class 10-A,Term 1 (2026-27),22000,22000,0,Paid,2026-08-15,2026-07-01
+inv-102,INV-2026-002,std-102,Ananya Sharma,Class 10-A,Term 1 (2026-27),22000,22000,0,Paid,2026-08-15,2026-07-01
+inv-103,INV-2026-003,std-103,Rohan Mehra,Class 10-A,Term 1 (2026-27),22000,11000,11000,Partial,2026-08-15,2026-07-01
+inv-104,INV-2026-004,std-104,Diya Sengupta,Class 10-A,Term 1 (2026-27),22000,22000,0,Paid,2026-08-15,2026-07-01
+inv-105,INV-2026-005,std-105,Kabir Khan,Class 10-A,Term 1 (2026-27),22000,0,22000,Unpaid,2026-08-15,2026-07-01
+inv-106,INV-2026-006,std-106,Sneha Kulkarni,Class 10-A,Term 1 (2026-27),22000,6600,15400,Partial,2026-08-15,2026-07-01
+inv-107,INV-2026-007,std-107,Aditya Chopra,Class 10-A,Term 1 (2026-27),22000,22000,0,Paid,2026-08-15,2026-07-01
+inv-108,INV-2026-008,std-108,Ishita Roy,Class 10-A,Term 1 (2026-27),22000,22000,0,Paid,2026-08-15,2026-07-01

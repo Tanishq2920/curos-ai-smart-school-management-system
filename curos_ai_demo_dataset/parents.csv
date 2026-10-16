@@ -1,0 +1,7 @@
+id,user_id,name,email,phone,student_id,student_name,relationship,occupation
+par-101,usr-parent-1,Vikram Patel,vikram.patel@gmail.com,+91 98765 43210,std-101,Aarav Patel,Father,Civil Engineer
+par-102,usr-parent-2,Suresh Sharma,suresh.sharma@gmail.com,+91 98765 43211,std-102,Ananya Sharma,Father,Chartered Accountant
+par-103,usr-parent-3,Kavita Mehra,kavita.mehra@gmail.com,+91 98765 43212,std-103,Rohan Mehra,Mother,Architect
+par-104,usr-parent-4,Debashish Sengupta,debashish.s@gmail.com,+91 98765 43213,std-104,Diya Sengupta,Father,Professor
+par-105,usr-parent-5,Imran Khan,imran.khan@gmail.com,+91 98765 43214,std-105,Kabir Khan,Father,Business Owner
+par-106,usr-parent-6,Manoj Kulkarni,manoj.k@gmail.com,+91 98765 43215,std-106,Sneha Kulkarni,Father,Software Architect
